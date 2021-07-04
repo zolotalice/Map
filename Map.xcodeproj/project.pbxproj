@@ -13,6 +13,9 @@
 		321B1BBA2691E9A9001E976D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B1BA52691E9A7001E976D /* ContentView.swift */; };
 		321B1BBB2691E9A9001E976D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 321B1BA62691E9A9001E976D /* Assets.xcassets */; };
 		321B1BBC2691E9A9001E976D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 321B1BA62691E9A9001E976D /* Assets.xcassets */; };
+		321B1BCA2691EA27001E976D /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B1BC92691EA27001E976D /* Home.swift */; };
+		321B1BCC2691EA5B001E976D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B1BCB2691EA5B001E976D /* MapView.swift */; };
+		321B1BCE2691EB50001E976D /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B1BCD2691EB50001E976D /* MapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		321B1BB32691E9A9001E976D /* Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		321B1BB52691E9A9001E976D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		321B1BB62691E9A9001E976D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		321B1BC92691EA27001E976D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		321B1BCB2691EA5B001E976D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		321B1BCD2691EB50001E976D /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,8 @@
 		321B1BA32691E9A7001E976D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				321B1BC62691E9DE001E976D /* ViewModel */,
+				321B1BC52691E9D0001E976D /* View */,
 				321B1BA42691E9A7001E976D /* MapApp.swift */,
 				321B1BA52691E9A7001E976D /* ContentView.swift */,
 				321B1BA62691E9A9001E976D /* Assets.xcassets */,
@@ -88,6 +96,23 @@
 				321B1BB62691E9A9001E976D /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		321B1BC52691E9D0001E976D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				321B1BC92691EA27001E976D /* Home.swift */,
+				321B1BCB2691EA5B001E976D /* MapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		321B1BC62691E9DE001E976D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				321B1BCD2691EB50001E976D /* MapViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +213,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				321B1BB92691E9A9001E976D /* ContentView.swift in Sources */,
+				321B1BCE2691EB50001E976D /* MapViewModel.swift in Sources */,
+				321B1BCC2691EA5B001E976D /* MapView.swift in Sources */,
+				321B1BCA2691EA27001E976D /* Home.swift in Sources */,
 				321B1BB72691E9A9001E976D /* MapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
