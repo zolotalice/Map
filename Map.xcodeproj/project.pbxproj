@@ -16,6 +16,7 @@
 		321B1BCA2691EA27001E976D /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B1BC92691EA27001E976D /* Home.swift */; };
 		321B1BCC2691EA5B001E976D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B1BCB2691EA5B001E976D /* MapView.swift */; };
 		321B1BCE2691EB50001E976D /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B1BCD2691EB50001E976D /* MapViewModel.swift */; };
+		321B1BD126933A92001E976D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B1BD026933A92001E976D /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		321B1BC92691EA27001E976D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		321B1BCB2691EA5B001E976D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		321B1BCD2691EB50001E976D /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		321B1BD026933A92001E976D /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		321B1BA32691E9A7001E976D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				321B1BCF26933A76001E976D /* Model */,
 				321B1BC62691E9DE001E976D /* ViewModel */,
 				321B1BC52691E9D0001E976D /* View */,
 				321B1BA42691E9A7001E976D /* MapApp.swift */,
@@ -113,6 +116,14 @@
 				321B1BCD2691EB50001E976D /* MapViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		321B1BCF26933A76001E976D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				321B1BD026933A92001E976D /* Place.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 				321B1BB92691E9A9001E976D /* ContentView.swift in Sources */,
 				321B1BCE2691EB50001E976D /* MapViewModel.swift in Sources */,
 				321B1BCC2691EA5B001E976D /* MapView.swift in Sources */,
+				321B1BD126933A92001E976D /* Place.swift in Sources */,
 				321B1BCA2691EA27001E976D /* Home.swift in Sources */,
 				321B1BB72691E9A9001E976D /* MapApp.swift in Sources */,
 			);

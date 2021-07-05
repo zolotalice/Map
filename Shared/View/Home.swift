@@ -20,9 +20,46 @@ struct Home: View {
                 .ignoresSafeArea(.all, edges: .all)
             
             VStack{
+                VStack(spacing: 0){
+                    HStack{
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.gray)
+                        
+                        TextField("Search", text: $mapData.searchText)
+                            .colorScheme(.light)
+                    }
+                    .padding(.vertical, 10)
+                    .padding(.horizontal)
+                    .background(Color.white)
+                    
+                    //Displayng results
+                    
+                    if !mapData.places.isEmpty && mapData.searchText != ""{
+                        ScrollView{
+                            VStack(spacing: 15){
+                                ForEach(mapData.places){ place in
+                                    
+                                    Text(place.place.name ?? "")
+                                        .foregroundColor(.black)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .padding(.leading)
+                                        .onTapGesture {
+                                            mapData
+                                                .selectPlace(place: place)
+                                        }
+                                    
+                                    Divider()
+                                }
+                            }
+                            .padding(.top)
+                        }
+                        .background(Color.white)
+                    }
+                    
+                }.padding()
                 Spacer()
                 VStack{
-                    Button(action: {}, label: {
+                    Button(action: {mapData.focusLocation()}, label: {
                         Image(systemName: "location.fill")
                             .font(.title2)
                             .padding(10)
@@ -54,7 +91,18 @@ struct Home: View {
                 UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
             }))
         })
+        .onChange(of: mapData.searchText, perform: { value in
+            //serching places
             
+            let delay = 0.3
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay){
+                if value == mapData.searchText{
+                    
+                    self.mapData.searchQuery()
+                }
+            }
+        })
         
     }
 }

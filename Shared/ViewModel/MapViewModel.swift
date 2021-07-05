@@ -21,6 +21,13 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
     //map type
     @Published var mapType: MKMapType = .standard
     
+    //Search text
+    @Published var searchText = ""
+    
+    // Searched Places
+    
+    @Published var places : [Place] = []
+    
     //update map type
     
     func updateMapType(){
@@ -40,6 +47,49 @@ class MapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
         guard let _ = region else{return}
         
         mapView.setRegion(region, animated: true)
+        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
+        
+    }
+    
+    //search Places
+    
+    func searchQuery(){
+        
+        places.removeAll()
+        
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = searchText
+        
+        //fetch
+        MKLocalSearch(request: request).start{ (response,_) in
+            
+            guard let result = response else{return}
+            
+            self.places = result.mapItems.compactMap({ (item) -> Place? in
+                return Place(place: item.placemark)
+            })
+        }
+    }
+    
+    func selectPlace(place: Place){
+        //showing pin on map
+        
+        searchText = ""
+        guard let coordinate = place.place.location?.coordinate else{return}
+        
+        let pointAnnotation = MKPointAnnotation()
+        pointAnnotation.coordinate = coordinate
+        pointAnnotation.title = place.place.name ?? "No name"
+        
+        //removing all old ones
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.addAnnotation(pointAnnotation)
+        
+        //moving map to that location
+        
+        let corrdinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: 10000, longitudinalMeters: 10000)
+        
+        mapView.setRegion(corrdinateRegion, animated: true)
         mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
     }
     
