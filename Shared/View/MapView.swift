@@ -41,6 +41,10 @@ struct MapView: UIViewRepresentable {
                     pinAnnotation.animatesDrop = true
                     pinAnnotation.canShowCallout = true
                     
+//                    let btn = UIButton(type: .detailDisclosure)
+//                    let btn = UIButton(type: <#T##UIButton.ButtonType#>, primaryAction: UIAction?)
+//                    pinAnnotation.rightCalloutAccessoryView = btn
+                    
                     return pinAnnotation
                 }
             }

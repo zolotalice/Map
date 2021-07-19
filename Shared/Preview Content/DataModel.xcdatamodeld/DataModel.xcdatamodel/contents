@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="UserPlace" representedClassName="UserPlace" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="placemark" optional="YES" attributeType="Transformable"/>
+    </entity>
+    <elements>
+        <element name="UserPlace" positionX="-45" positionY="0" width="128" height="59"/>
+    </elements>
+</model>

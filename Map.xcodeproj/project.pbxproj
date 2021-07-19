@@ -17,6 +17,10 @@
 		321B1BCC2691EA5B001E976D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B1BCB2691EA5B001E976D /* MapView.swift */; };
 		321B1BCE2691EB50001E976D /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B1BCD2691EB50001E976D /* MapViewModel.swift */; };
 		321B1BD126933A92001E976D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B1BD026933A92001E976D /* Place.swift */; };
+		3249D78526A07C8700573C5B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3249D78326A07C8700573C5B /* DataModel.xcdatamodeld */; };
+		3249D78726A0836500573C5B /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3249D78626A0836500573C5B /* Detail.swift */; };
+		3249D78A26A1DF3500573C5B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3249D78926A1DF3400573C5B /* CoreDataManager.swift */; };
+		3249D78C26A1DFEC00573C5B /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3249D78B26A1DFEC00573C5B /* DataViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		321B1BCB2691EA5B001E976D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		321B1BCD2691EB50001E976D /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		321B1BD026933A92001E976D /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		3249D78426A07C8700573C5B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		3249D78626A0836500573C5B /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		3249D78926A1DF3400573C5B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3249D78B26A1DFEC00573C5B /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +74,11 @@
 			isa = PBXGroup;
 			children = (
 				321B1BCF26933A76001E976D /* Model */,
-				321B1BC62691E9DE001E976D /* ViewModel */,
+				321B1BC62691E9DE001E976D /* ViewModels */,
 				321B1BC52691E9D0001E976D /* View */,
 				321B1BA42691E9A7001E976D /* MapApp.swift */,
 				321B1BA52691E9A7001E976D /* ContentView.swift */,
+				3249D78826A1DEF900573C5B /* Preview Content */,
 				321B1BA62691E9A9001E976D /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -106,16 +115,18 @@
 			children = (
 				321B1BC92691EA27001E976D /* Home.swift */,
 				321B1BCB2691EA5B001E976D /* MapView.swift */,
+				3249D78626A0836500573C5B /* Detail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		321B1BC62691E9DE001E976D /* ViewModel */ = {
+		321B1BC62691E9DE001E976D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				321B1BCD2691EB50001E976D /* MapViewModel.swift */,
+				3249D78B26A1DFEC00573C5B /* DataViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		321B1BCF26933A76001E976D /* Model */ = {
@@ -124,6 +135,15 @@
 				321B1BD026933A92001E976D /* Place.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3249D78826A1DEF900573C5B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3249D78326A07C8700573C5B /* DataModel.xcdatamodeld */,
+				3249D78926A1DF3400573C5B /* CoreDataManager.swift */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,8 +245,12 @@
 			files = (
 				321B1BB92691E9A9001E976D /* ContentView.swift in Sources */,
 				321B1BCE2691EB50001E976D /* MapViewModel.swift in Sources */,
+				3249D78726A0836500573C5B /* Detail.swift in Sources */,
 				321B1BCC2691EA5B001E976D /* MapView.swift in Sources */,
+				3249D78C26A1DFEC00573C5B /* DataViewModel.swift in Sources */,
+				3249D78526A07C8700573C5B /* DataModel.xcdatamodeld in Sources */,
 				321B1BD126933A92001E976D /* Place.swift in Sources */,
+				3249D78A26A1DF3500573C5B /* CoreDataManager.swift in Sources */,
 				321B1BCA2691EA27001E976D /* Home.swift in Sources */,
 				321B1BB72691E9A9001E976D /* MapApp.swift in Sources */,
 			);
@@ -479,6 +503,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3249D78326A07C8700573C5B /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3249D78426A07C8700573C5B /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 3249D78426A07C8700573C5B /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 321B1B9F2691E9A7001E976D /* Project object */;
 }
